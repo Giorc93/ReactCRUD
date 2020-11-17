@@ -20,7 +20,14 @@ const UserTable = (props) => (
               <td>{user.name}</td>
               <td>{user.username}</td>
               <td>
-                <button className="button muted-button">Edit</button>
+                <button
+                  className="button muted-button"
+                  onClick={() => {
+                    props.editRow(user);
+                  }}
+                >
+                  Edit
+                </button>
                 {/* Fns must be called inside an arrow fn to avoid being called automatically */}
                 <button
                   className="button muted-button"
